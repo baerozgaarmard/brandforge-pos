@@ -1,30 +1,36 @@
 <div align="center">
 
-<img src="docs/assets/brandforge-lockup.svg" alt="BrandForge Media POS" width="480">
+<img src="docs/assets/brandforge-lockup.svg" alt="BrandForge POS Logo" width="460">
+
+<br/><br/>
 
 <p align="center">
-  <img src="docs/assets/hero-animated.svg" alt="BrandForge Media POS: animated overview" width="100%">
+  <img src="docs/assets/hero-animated.svg" alt="BrandForge POS: Interactive Terminal Overview" width="100%">
 </p>
 
 **Open-source, offline-first Restaurant POS & Operations Suite**  
 Fast touch billing with **UPI QR payments**, dynamic floor management, Kitchen Display (KDS), online table reservations, inventory recipe costing, **staff attendance & payroll**, accounting, and multi-branch control. Runs 100% on your own local LAN server with zero subscriptions and zero mandatory cloud dependencies.
 
-[![License: AGPL v3](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](./LICENSE)
+<br/>
+
+[![License: AGPL v3](https://img.shields.io/badge/license-AGPL--3.0-E11D48.svg)](./LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D22-339933?logo=node.js&logoColor=white)](package.json)
 [![pnpm](https://img.shields.io/badge/pnpm-workspaces-F69220?logo=pnpm&logoColor=white)](pnpm-workspace.yaml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](apps/web/tsconfig.json)
-[![NestJS](https://img.shields.io/badge/backend-NestJS-E0234E?logo=nestjs&logoColor=white)](apps/backend)
+[![NestJS](https://img.shields.io/badge/backend-NestJS%2011-E0234E?logo=nestjs&logoColor=white)](apps/backend)
 [![Next.js](https://img.shields.io/badge/frontend-Next.js%2016-000000?logo=next.js&logoColor=white)](apps/web)
 [![CasaOS / ZimaOS](https://img.shields.io/badge/CasaOS%20%2F%20ZimaOS-one--click%20app-1F6FEB)](casaos/README.md)
 
-Developed & Maintained by **BrandForge Media**
+Maintained by **BrandForge Media**
+
+<br/>
 
 [Quick Start](#-quick-start) ·
-[Feature Showcase](#-visual-showcase) ·
+[Feature Bento](#-core-capabilities) ·
 [Hardware & Printing](#-hardware--thermal-printing) ·
-[Architecture](#-architecture) ·
-[CasaOS](#-casaos--home-server) ·
-[License & Credits](#-license--attribution)
+[Architecture](#-network--system-architecture) ·
+[Live Gallery](#-visual-showcase) ·
+[License](#-license--attribution)
 
 </div>
 
@@ -42,49 +48,71 @@ The entire stack — PostgreSQL 16, NestJS API, and Next.js frontend — runs on
 
 ---
 
+## 🍱 Core Capabilities
+
+<p align="center">
+  <img src="docs/assets/feature-bento.svg" alt="BrandForge POS Feature Bento Grid" width="100%">
+</p>
+
+---
+
+## 🏛️ Network & System Architecture
+
+BrandForge POS operates as a self-contained local appliance. A single machine on the restaurant's LAN runs the backend, database, and web server. All counter tills, waiter tablets, kitchen bump bars, and diner phones communicate over high-speed local Wi-Fi / Ethernet without pinging the cloud.
+
+<p align="center">
+  <img src="docs/assets/architecture-diagram.svg" alt="BrandForge POS Network & System Architecture" width="100%">
+</p>
+
+---
+
 ## 📸 Visual Showcase
 
 <div align="center">
 
 ### 1. High-Speed Touch POS & Visual Cart
 *Fast order entry with modifier groups, table drafts, discount application, split billing, and UPI QR display.*
-<img src="docs/screenshots/tutorial/pos-cart.png" alt="POS Cart & Checkout Screen" width="920">
+<img src="docs/screenshots/tutorial/pos-cart.png" alt="POS Cart & Checkout Screen" width="940">
 
 ---
 
 ### 2. Live Kitchen Display System (KDS Kanban)
 *Station-routed tickets, prep aging timers, bump-bar progression, and audible alerts.*
-<img src="docs/screenshots/tutorial/kitchen-display.png" alt="Kitchen Display System" width="920">
+<img src="docs/screenshots/tutorial/kitchen-display.png" alt="Kitchen Display System" width="940">
 
 ---
 
 ### 3. Interactive Multi-Floor Canvas & Waitlist
 *Visual table management, occupancy states, drag-and-drop layouts, and live party queues.*
-<img src="docs/screenshots/tutorial/tables-map.png" alt="Interactive Tables Map" width="920">
+<img src="docs/screenshots/tutorial/tables-map.png" alt="Interactive Tables Map" width="940">
 
 ---
 
 ### 4. Executive Analytics & Sales Intelligence
 *Real-time revenue metrics, product mix trends, food waste analysis, and payment breakdowns.*
-<img src="docs/screenshots/tutorial/dashboard-dark.png" alt="Analytics Dashboard" width="920">
+<img src="docs/screenshots/tutorial/dashboard-dark.png" alt="Analytics Dashboard" width="940">
 
 ---
 
 ### 5. Inventory, Recipe Costing & Procurement
 *FIFO stock batch consumption, ingredient purchase orders, supplier management, and waste logging.*
-<img src="docs/screenshots/tutorial/inventory-procurement.png" alt="Inventory & Procurement" width="920">
+<img src="docs/screenshots/tutorial/inventory-procurement.png" alt="Inventory & Procurement" width="940">
 
 ---
 
 ### 6. Accounting Ledger & Daily Cash Reconciliation
 *Opening floats, cash drop verifications, till variance audits, and Indian GST reporting.*
-<img src="docs/screenshots/tutorial/accounting-cash-close.png" alt="Daily Cash Close" width="920">
+<img src="docs/screenshots/tutorial/accounting-cash-close.png" alt="Daily Cash Close" width="940">
 
 </div>
 
 ---
 
 ## 🚀 Quick Start
+
+<p align="center">
+  <img src="docs/assets/install-animated.svg" alt="BrandForge POS Installation Walkthrough" width="100%">
+</p>
 
 ### 1. Docker Compose (Recommended)
 
@@ -122,7 +150,6 @@ pnpm install
 
 # Configure environment
 cp .env.example .env
-# Update DATABASE_URL and JWT_SECRET in .env
 
 # Run database migrations and seed data
 pnpm --filter backend prisma migrate deploy
@@ -146,40 +173,6 @@ BrandForge Media POS communicates directly with raw hardware without third-party
    - Automatic cash drawer trigger pulse (`ESC p 0 25 250`)
    - Full paper cut commands (`GS V 66 0`)
 4. **Browser Fallback**: Renders high-fidelity receipts into off-screen hidden iframes connected to native OS print spoolers.
-
----
-
-## 🏛️ Architecture
-
-```
-                       ┌────────────────────────────────────────────────────────┐
-                       │                     CLIENT SURFACES                    │
-                       │  Web POS · Kitchen KDS · Table Canvas · Kiosk PWA      │
-                       └───────────────────────────┬────────────────────────────┘
-                                                   │
-                                      HTTP / Cookie / Socket.IO
-                                                   │
-                                                   ▼
-                       ┌────────────────────────────────────────────────────────┐
-                       │                   apps/backend (NestJS)                │
-                       │  • RBAC & JWT Guards     • Realtime Gateway            │
-                       │  • Orders & Settlement   • Thermal ESC/POS Encoder     │
-                       │  • Inventory & Costing   • Native MCP Server (/v1/mcp) │
-                       └───────────────────────────┬────────────────────────────┘
-                                                   │
-                                              Prisma ORM
-                                                   │
-                                                   ▼
-                                       ┌───────────────────────┐
-                                       │     PostgreSQL 16     │
-                                       │ 78 Relational Models  │
-                                       └───────────────────────┘
-```
-
-- **Backend**: NestJS 11 with Prisma ORM, Socket.IO realtime push, and native Model Context Protocol (MCP) server.
-- **Frontend**: Next.js 16 (App Router) + React 19 + Tailwind CSS v4 + `@base-ui/react` primitives.
-- **Contracts**: `@brandforge/types` (`packages/types`) providing end-to-end Zod validation schemas.
-- **Windows Client**: `windows/msix/` provides a native C# (.NET 8) WinForms + WebView2 launcher with system tray integration.
 
 ---
 

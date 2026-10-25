@@ -61,3 +61,17 @@ Comprehensive architectural, codebase, security, hardware, and dependency analys
   - CasaOS manifest `author`, `developer`, `title`, and `description` updated to BrandForge Media.
   - Debian `product.conf` updated with BrandForge Media vendor & title.
 - **Licensing Compliance:** Root `LICENSE` file and AGPL-3.0 copyleft terms remain intact.
+
+
+---
+
+## 6. GitHub Publication
+- **Repository URL:** `https://github.com/baerozgaarmard/brandforge-pos`
+- **Visibility:** Public
+- **Branch:** `main`
+- **Visual Assets:**
+  - `docs/assets/brandforge-lockup.svg` (crisp vector lockup)
+  - `docs/assets/hero-animated.svg` (animated terminal & POS ticket banner)
+  - `docs/assets/install-animated.svg` (animated quickstart preview)
+  - Curated genuine software screenshots embedded in `README.md` (POS Cart, KDS bump-bar, Table canvas, Analytics Dashboard, Inventory & Cash close).
+- **Publication Method:** Unshallowed git tree, staged all rebranding and visual changes, authenticated via GitHub CLI, and pushed upstream tracking branch `main`.
