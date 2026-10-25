@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" fill="none">
+  <defs>
+    <linearGradient id="bentoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C14"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="rosePill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF3366"/>
+      <stop offset="100%" stop-color="#E11D48"/>
+    </linearGradient>
+    <linearGradient id="cyanPill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="emeraldPill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberPill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1100" height="520" rx="18" fill="url(#bentoBg)" stroke="#334155" stroke-opacity="0.4"/>
+
+  <!-- Top Headline -->
+  <g transform="translate(40, 36)">
+    <rect width="130" height="26" rx="13" fill="#E11D48" fill-opacity="0.15" stroke="#E11D48" stroke-opacity="0.3"/>
+    <text x="65" y="17" class="font-sans" font-size="11" font-weight="700" fill="#FB7185" text-anchor="middle" letter-spacing="1">CAPABILITIES</text>
+    <text x="145" y="20" class="font-sans" font-size="20" font-weight="800" fill="#FFFFFF">Engineered for Harsh Counter &amp; Kitchen Realities</text>
+  </g>
+
+  <!-- 2x2 BENTO GRID -->
+  <!-- Card 1: 100% Offline-First LAN Operation -->
+  <g transform="translate(40, 80)">
+    <rect width="495" height="190" rx="14" fill="url(#cardGrad)" stroke="#334155" filter="url(#cardShadow)"/>
+    <g transform="translate(24, 24)">
+      <rect width="42" height="42" rx="10" fill="url(#rosePill)"/>
+      <path d="M14 26H28M14 16H28M17 21H25" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="56" y="20" class="font-sans" font-size="16" font-weight="700" fill="#FFFFFF">100% Offline-First LAN Engine</text>
+      <text x="56" y="38" class="font-sans" font-size="12" font-weight="500" fill="#94A3B8">Zero WAN Dependency for Floor Operations</text>
+      
+      <!-- Multi-line description strictly kept inside box -->
+      <text x="0" y="76" class="font-sans" font-size="13" font-weight="400" fill="#CBD5E1">
+        <tspan x="0" dy="0">PostgreSQL, NestJS, and Next.js all run locally</tspan>
+        <tspan x="0" dy="19">on the venue server. Order taking, KDS, tables,</tspan>
+        <tspan x="0" dy="19">and billing keep working when the WAN drops.</tspan>
+      </text>
+
+      <g transform="translate(0, 126)">
+        <rect width="84" height="22" rx="6" fill="#1E293B"/>
+        <text x="42" y="15" class="font-mono" font-size="11" font-weight="600" fill="#FDA4AF" text-anchor="middle">Local LAN</text>
+        <rect x="92" y="0" width="94" height="22" rx="6" fill="#1E293B"/>
+        <text x="139" y="15" class="font-mono" font-size="11" font-weight="600" fill="#FDA4AF" text-anchor="middle">Zero Latency</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 2: Live Kitchen Display System (KDS) -->
+  <g transform="translate(565, 80)">
+    <rect width="495" height="190" rx="14" fill="url(#cardGrad)" stroke="#334155" filter="url(#cardShadow)"/>
+    <g transform="translate(24, 24)">
+      <rect width="42" height="42" rx="10" fill="url(#emeraldPill)"/>
+      <path d="M15 15H20V27H15ZM22 15H27V23H22Z" fill="#FFFFFF"/>
+      <text x="56" y="20" class="font-sans" font-size="16" font-weight="700" fill="#FFFFFF">Multi-Station Kitchen Kanban (KDS)</text>
+      <text x="56" y="38" class="font-sans" font-size="12" font-weight="500" fill="#94A3B8">Realtime Ticket Progression &amp; Audio Chimes</text>
+
+      <!-- Multi-line description strictly kept inside box -->
+      <text x="0" y="76" class="font-sans" font-size="13" font-weight="400" fill="#CBD5E1">
+        <tspan x="0" dy="0">Tickets route to grill, tandoor, or bar stations.</tspan>
+        <tspan x="0" dy="19">Visual aging timers flag orders over 15 minutes.</tspan>
+        <tspan x="0" dy="19">Chime audio alerts trigger on every new ticket.</tspan>
+      </text>
+
+      <g transform="translate(0, 126)">
+        <rect width="110" height="22" rx="6" fill="#1E293B"/>
+        <text x="55" y="15" class="font-mono" font-size="11" font-weight="600" fill="#6EE7B7" text-anchor="middle">Audio Unlock</text>
+        <rect x="118" y="0" width="105" height="22" rx="6" fill="#1E293B"/>
+        <text x="170" y="15" class="font-mono" font-size="11" font-weight="600" fill="#6EE7B7" text-anchor="middle">Station Routing</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 3: Server-Authoritative Money & GST -->
+  <g transform="translate(40, 290)">
+    <rect width="495" height="190" rx="14" fill="url(#cardGrad)" stroke="#334155" filter="url(#cardShadow)"/>
+    <g transform="translate(24, 24)">
+      <rect width="42" height="42" rx="10" fill="url(#amberPill)"/>
+      <path d="M16 16H26M16 21H24M19 16V26" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="56" y="20" class="font-sans" font-size="16" font-weight="700" fill="#FFFFFF">Server-Authoritative Money &amp; GST</text>
+      <text x="56" y="38" class="font-sans" font-size="12" font-weight="500" fill="#94A3B8">No Client Drift, 50/50 CGST/SGST Splits</text>
+
+      <!-- Multi-line description strictly kept inside box -->
+      <text x="0" y="76" class="font-sans" font-size="13" font-weight="400" fill="#CBD5E1">
+        <tspan x="0" dy="0">Strict decimal precision prevents financial drift.</tspan>
+        <tspan x="0" dy="19">Discounts scale the tax base; loyalty is tender.</tspan>
+        <tspan x="0" dy="19">Cash change locking strictly enforces till audit.</tspan>
+      </text>
+
+      <g transform="translate(0, 126)">
+        <rect width="90" height="22" rx="6" fill="#1E293B"/>
+        <text x="45" y="15" class="font-mono" font-size="11" font-weight="600" fill="#FCD34D" text-anchor="middle">Indian GST</text>
+        <rect x="98" y="0" width="110" height="22" rx="6" fill="#1E293B"/>
+        <text x="153" y="15" class="font-mono" font-size="11" font-weight="600" fill="#FCD34D" text-anchor="middle">Split Payments</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 4: Direct USB & LAN Thermal Printing -->
+  <g transform="translate(565, 290)">
+    <rect width="495" height="190" rx="14" fill="url(#cardGrad)" stroke="#334155" filter="url(#cardShadow)"/>
+    <g transform="translate(24, 24)">
+      <rect width="42" height="42" rx="10" fill="url(#cyanPill)"/>
+      <rect x="14" y="17" width="14" height="10" rx="2" stroke="#FFFFFF" stroke-width="2"/>
+      <path d="M17 14H25V17H17ZM17 25H25V28H17Z" fill="#FFFFFF"/>
+      <text x="56" y="20" class="font-sans" font-size="16" font-weight="700" fill="#FFFFFF">Direct Kernel ESC/POS Thermal Printing</text>
+      <text x="56" y="38" class="font-sans" font-size="12" font-weight="500" fill="#94A3B8">Native Byte Streams · Zero Driver Lag</text>
+
+      <!-- Multi-line description strictly kept inside box -->
+      <text x="0" y="76" class="font-sans" font-size="13" font-weight="400" fill="#CBD5E1">
+        <tspan x="0" dy="0">Direct Linux kernel /dev/usb/lp0 character stream</tspan>
+        <tspan x="0" dy="19">and LAN Port 9100. Uses native printer fonts,</tspan>
+        <tspan x="0" dy="19">cash drawer pulse, and duplicate print guards.</tspan>
+      </text>
+
+      <g transform="translate(0, 126)">
+        <rect width="115" height="22" rx="6" fill="#1E293B"/>
+        <text x="57" y="15" class="font-mono" font-size="11" font-weight="600" fill="#93C5FD" text-anchor="middle">/dev/usb/lp0</text>
+        <rect x="123" y="0" width="115" height="22" rx="6" fill="#1E293B"/>
+        <text x="180" y="15" class="font-mono" font-size="11" font-weight="600" fill="#93C5FD" text-anchor="middle">TCP Port 9100</text>
+      </g>
+    </g>
+  </g>
+</svg>

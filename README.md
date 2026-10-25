@@ -1,11 +1,7 @@
 <div align="center">
 
-<img src="docs/assets/brandforge-header.svg" alt="BrandForge POS Logo" width="460">
-
-<br/><br/>
-
 <p align="center">
-  <img src="docs/assets/brandforge-hero.svg" alt="BrandForge POS: Interactive Terminal Overview" width="100%">
+  <img src="docs/assets/brandforge-showcase.svg" alt="BrandForge POS: Enterprise Restaurant Management System" width="100%">
 </p>
 
 **Open-source, offline-first Restaurant POS & Operations Suite**  
@@ -51,7 +47,7 @@ The entire stack — PostgreSQL 16, NestJS API, and Next.js frontend — runs on
 ## 🍱 Core Capabilities
 
 <p align="center">
-  <img src="docs/assets/brandforge-capabilities.svg" alt="BrandForge POS Feature Bento Grid" width="100%">
+  <img src="docs/assets/brandforge-bento.svg" alt="BrandForge POS Feature Bento Grid" width="100%">
 </p>
 
 ---
