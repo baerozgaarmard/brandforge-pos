@@ -55,8 +55,8 @@
     <SelfContained>true</SelfContained>
 
     <Version>1.0.3.0</Version>
-    <Product>Nodedr OrderRestro</Product>
-    <Company>Nodedr Infotech Private Limited</Company>
+    <Product>BrandForge Media POS</Product>
+    <Company>BrandForge Media</Company>
     <Copyright>Copyright © Nodedr Infotech Private Limited</Copyright>
   </PropertyGroup>
 

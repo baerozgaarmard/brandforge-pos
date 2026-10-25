@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" viewBox="0 0 600 120" fill="none">
+  <defs>
+    <linearGradient id="bfGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9F1239" />
+      <stop offset="50%" stop-color="#E11D48" />
+      <stop offset="100%" stop-color="#FB7185" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#9F1239" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Icon Mark -->
+  <g transform="translate(20, 20)">
+    <rect width="80" height="80" rx="20" fill="url(#bfGradient)" filter="url(#shadow)" />
+    <!-- Fork & Knife minimalist monogram -->
+    <path d="M32 26V42C32 46.4183 35.5817 50 40 50V56M40 50C44.4183 50 48 46.4183 48 42V26M36 26V36M44 26V36" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M40 56V62" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="40" cy="62" r="3" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="125" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" fill="#E2E8F0" letter-spacing="-0.5">
+    BrandForge <tspan fill="url(#bfGradient)">POS</tspan>
+  </text>
+  <text x="127" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8" letter-spacing="0.2">
+    ENTERPRISE RESTAURANT MANAGEMENT SYSTEM
+  </text>
+</svg>

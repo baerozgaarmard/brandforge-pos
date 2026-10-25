@@ -1,7 +1,10 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: nodedr-restaurant-postgres
+    container_name: brandforge-pos-postgres
+    labels:
+      org.opencontainers.image.title: "BrandForge Media POS Database"
+      org.opencontainers.image.vendor: "BrandForge Media"
     restart: unless-stopped
     environment:
       POSTGRES_USER: nodedr
@@ -31,7 +34,10 @@ services:
     # the in-app "Update now" button (see the `updater` service below) pulls
     # the published image of a newer version under it.
     image: ghcr.io/raktim94/nodedr-restaurant-pos-backend:${APP_VERSION:-dev}
-    container_name: nodedr-restaurant-backend
+    container_name: brandforge-pos-backend
+    labels:
+      org.opencontainers.image.title: "BrandForge Media POS Backend"
+      org.opencontainers.image.vendor: "BrandForge Media"
     restart: unless-stopped
     environment:
       DATABASE_URL: "postgresql://nodedr:${POSTGRES_PASSWORD:-nodedr_dev_pw}@postgres:5432/nodedr_restaurant"
@@ -57,7 +63,7 @@ services:
       # these). Uncomment for a headless/CasaOS-style deployment that
       # configures backups purely from env vars instead.
       # S3_BACKUP_ENDPOINT: "https://s3.example.com"
-      # S3_BACKUP_BUCKET: "orderrestro-backups"
+      # S3_BACKUP_BUCKET: "brandforge-pos-backups"
       # S3_BACKUP_ACCESS_KEY_ID: ""
       # S3_BACKUP_SECRET_ACCESS_KEY: ""
       # S3_BACKUP_REGION: "auto"
@@ -107,7 +113,10 @@ services:
         # build ARG, not a runtime env (see apps/web/Dockerfile comment).
         BACKEND_URL: "http://backend:4000"
     image: ghcr.io/raktim94/nodedr-restaurant-pos-web:${APP_VERSION:-dev}
-    container_name: nodedr-restaurant-web
+    container_name: brandforge-pos-web
+    labels:
+      org.opencontainers.image.title: "BrandForge Media POS Web"
+      org.opencontainers.image.vendor: "BrandForge Media"
     restart: unless-stopped
     ports:
       - "${HOST_PORT:-1995}:3000"
@@ -126,11 +135,14 @@ services:
     build:
       context: ./updater
     image: ghcr.io/raktim94/nodedr-restaurant-pos-updater:latest
-    container_name: nodedr-restaurant-updater
+    container_name: brandforge-pos-updater
+    labels:
+      org.opencontainers.image.title: "BrandForge Media POS Updater"
+      org.opencontainers.image.vendor: "BrandForge Media"
     restart: unless-stopped
     environment:
       UPDATER_TOKEN: "${UPDATER_TOKEN:-nodedr-restaurant-updater}"
-      TARGET_CONTAINERS: "nodedr-restaurant-backend,nodedr-restaurant-web"
+      TARGET_CONTAINERS: "brandforge-pos-backend,brandforge-pos-web,nodedr-restaurant-backend,nodedr-restaurant-web"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 

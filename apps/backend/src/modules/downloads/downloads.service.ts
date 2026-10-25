@@ -2,6 +2,7 @@ import { NotFoundException } from '@nestjs/common';
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../prisma/prisma.service';
 
+// BrandForge Media POS download channels:
 // Fixed, server-side whitelist: the ONLY URLs this endpoint will ever
 // redirect to. The client sends a channel key (an enum-like string, never a
 // URL), so this can never become an open redirect — see the security

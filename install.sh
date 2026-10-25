@@ -107,12 +107,12 @@ fi
 # re-install without duplicating or clobbering anything.
 if [ "$load_demo" = true ]; then
   echo "Loading demo data (restaurant, menu, staff logins)..."
-  docker exec nodedr-restaurant-backend npx ts-node prisma/seed.ts
+  docker exec brandforge-pos-backend npx ts-node prisma/seed.ts 2>/dev/null || docker exec nodedr-restaurant-backend npx ts-node prisma/seed.ts
 fi
 
 # --- 6. Done -----------------------------------------------------------------
 echo ""
-echo "Nodedr OrderRestro is up and running."
+echo "BrandForge Media POS is up and running."
 echo "Open http://localhost:${HOST_PORT}"
 if [ "$load_demo" = true ]; then
   echo "Sign in with the demo account: owner@demo.local / Password123!"

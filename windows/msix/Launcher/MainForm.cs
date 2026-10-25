@@ -24,7 +24,7 @@ internal sealed class MainForm : Form
 
     public MainForm(EventWaitHandle activateEvent)
     {
-        Text = "Nodedr OrderRestro";
+        Text = "BrandForge Media POS";
         StartPosition = FormStartPosition.CenterScreen;
         Size = new Size(1360, 860);
         MinimumSize = new Size(900, 600);
@@ -168,7 +168,7 @@ internal sealed class MainForm : Form
             ShowFatalError(
                 "The Microsoft Edge WebView2 Runtime is required but isn't installed on this PC.\n\n" +
                 "Install it from https://go.microsoft.com/fwlink/p/?LinkId=2124703 (Evergreen " +
-                "Bootstrapper), then reopen Nodedr OrderRestro.");
+                "Bootstrapper), then reopen BrandForge Media POS.");
             return;
         }
         catch (Exception ex)
@@ -227,8 +227,8 @@ internal sealed class MainForm : Form
         };
         _supervisor.Faulted += message =>
         {
-            if (InvokeRequired) { BeginInvoke((Action)(() => _tray?.ShowBalloon("Nodedr OrderRestro", message))); return; }
-            _tray?.ShowBalloon("Nodedr OrderRestro", message);
+            if (InvokeRequired) { BeginInvoke((Action)(() => _tray?.ShowBalloon("BrandForge Media POS", message))); return; }
+            _tray?.ShowBalloon("BrandForge Media POS", message);
         };
 
         ShowStatus("Starting server…");
@@ -261,8 +261,8 @@ internal sealed class MainForm : Form
 
             ShowFatalError(
                 technicalMessage: $"Could not start the embedded server.\n\n{ex.Message}\n\nLogs: {ServerPaths.ServerLogDir}",
-                friendlyHeadline: "OrderRestro couldn't start its local database",
-                friendlyBody: "Your restaurant data has not been deleted. OrderRestro was unable to start its local database service.",
+                friendlyHeadline: "BrandForge Media POS couldn't start its local database",
+                friendlyBody: "Your restaurant data has not been deleted. BrandForge Media POS was unable to start its local database service.",
                 retry: async () => { Controls.Remove(_fatalErrorPanel); _fatalErrorPanel = null; await InitializeAsync(); });
             return false;
         }
@@ -328,9 +328,9 @@ internal sealed class MainForm : Form
 
         var confirm = MessageBox.Show(
             this,
-            "This permanently deletes ALL local OrderRestro data on this PC — your restaurant's " +
+            "This permanently deletes ALL local BrandForge Media POS data on this PC — your restaurant's " +
             "database, uploaded images, and settings. This cannot be undone.\n\n" +
-            "Only do this if you're uninstalling OrderRestro from this PC, or want to start " +
+            "Only do this if you're uninstalling BrandForge Media POS from this PC, or want to start " +
             "completely fresh.\n\nContinue?",
             "Remove All Local Data",
             MessageBoxButtons.YesNo,
@@ -378,9 +378,9 @@ internal sealed class MainForm : Form
         {
             MessageBox.Show(
                 this,
-                "Local data removed. Windows Settings will now open — find \"Nodedr OrderRestro\" " +
+                "Local data removed. Windows Settings will now open — find \"BrandForge Media POS\" " +
                 "and click Uninstall to finish removing the app.",
-                "Nodedr OrderRestro",
+                "BrandForge Media POS",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
@@ -389,9 +389,9 @@ internal sealed class MainForm : Form
             MessageBox.Show(
                 this,
                 $"The server was stopped, but some files could not be deleted automatically:\n\n{deleteError}\n\n" +
-                $"You can safely delete this folder by hand once OrderRestro is closed: {dataDir}\n\n" +
+                $"You can safely delete this folder by hand once BrandForge Media POS is closed: {dataDir}\n\n" +
                 "Windows Settings will now open so you can uninstall the app.",
-                "Nodedr OrderRestro",
+                "BrandForge Media POS",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Warning);
         }
@@ -420,7 +420,7 @@ internal sealed class MainForm : Form
             e.Cancel = true;
             Hide();
             _tray?.ShowBalloon(
-                "Nodedr OrderRestro",
+                "BrandForge Media POS",
                 "Still running in the background so other devices stay connected. Use the tray icon to reopen or fully stop it.",
                 ToolTipIcon.Info);
         }
@@ -445,7 +445,7 @@ internal sealed class MainForm : Form
         _webView.Visible = false;
         _errorLabel.Text =
             $"Could not reach {_config.ServerUrl}.\n\n" +
-            "Check that the OrderRestro server is running and this device is on\n" +
+            "Check that the BrandForge Media POS server is running and this device is on\n" +
             "the same network, then choose File → Reload, or File → Change server address…";
         _errorLabel.Visible = true;
     }
@@ -481,7 +481,7 @@ internal sealed class MainForm : Form
 
         var headline = new Label
         {
-            Text = friendlyHeadline ?? "OrderRestro couldn't start",
+            Text = friendlyHeadline ?? "BrandForge Media POS couldn't start",
             Font = new Font("Segoe UI", 14f, FontStyle.Bold),
             AutoSize = false,
             Dock = DockStyle.Top,

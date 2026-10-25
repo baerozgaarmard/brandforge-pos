@@ -27,7 +27,7 @@ internal sealed class ServerSettingsForm : Form
 
     public ServerSettingsForm(string? currentUrl)
     {
-        Text = "Connect to OrderRestro";
+        Text = "Connect to BrandForge Media POS";
         FormBorderStyle = FormBorderStyle.FixedDialog;
         StartPosition = FormStartPosition.CenterScreen;
         MaximizeBox = false;
@@ -36,7 +36,7 @@ internal sealed class ServerSettingsForm : Form
 
         var titleLabel = new Label
         {
-            Text = "Connect to your restaurant's OrderRestro server",
+            Text = "Connect to your restaurant's BrandForge Media POS server",
             Font = new Font("Segoe UI", 11f, FontStyle.Bold),
             AutoSize = false,
             Location = new Point(20, 16),
