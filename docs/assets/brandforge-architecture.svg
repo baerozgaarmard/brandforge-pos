@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420" fill="none">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="roseAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="emeraldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1100" height="420" rx="16" fill="url(#archBg)" stroke="#334155" stroke-opacity="0.5"/>
+
+  <!-- Top Title Bar -->
+  <g transform="translate(40, 36)">
+    <rect width="160" height="26" rx="13" fill="#1E293B" stroke="#E11D48" stroke-opacity="0.4"/>
+    <text x="80" y="17" class="font-sans" font-size="11" font-weight="700" fill="#FB7185" text-anchor="middle" letter-spacing="0.5">LOCAL LAN TOPOLOGY</text>
+    <text x="180" y="20" class="font-sans" font-size="16" font-weight="700" fill="#F8FAFC">BrandForge POS Hardware &amp; Network Architecture</text>
+    <text x="1020" y="20" class="font-sans" font-size="13" font-weight="600" fill="#10B981" text-anchor="end">● 100% Offline Capable</text>
+  </g>
+
+  <!-- COLUMN 1: CLIENT SURFACES -->
+  <g transform="translate(40, 85)">
+    <rect width="280" height="295" rx="14" fill="url(#coreGrad)" stroke="#334155" filter="url(#boxShadow)"/>
+    <rect width="280" height="38" rx="14" fill="#1E293B" fill-opacity="0.7"/>
+    <rect y="24" width="280" height="14" fill="#1E293B" fill-opacity="0.7"/>
+    <text x="20" y="24" class="font-sans" font-size="13" font-weight="700" fill="#93C5FD">FRONT-OF-HOUSE SURFACES</text>
+
+    <!-- Items -->
+    <g transform="translate(18, 54)">
+      <!-- Item 1 -->
+      <rect width="244" height="42" rx="8" fill="#0B132B" stroke="#1E293B"/>
+      <circle cx="18" cy="21" r="5" fill="#3B82F6"/>
+      <text x="32" y="25" class="font-sans" font-size="13" font-weight="600" fill="#E2E8F0">Cashier POS Touchscreen</text>
+
+      <!-- Item 2 -->
+      <g transform="translate(0, 52)">
+        <rect width="244" height="42" rx="8" fill="#0B132B" stroke="#1E293B"/>
+        <circle cx="18" cy="21" r="5" fill="#3B82F6"/>
+        <text x="32" y="25" class="font-sans" font-size="13" font-weight="600" fill="#E2E8F0">Waiter Handheld Tablets</text>
+      </g>
+
+      <!-- Item 3 -->
+      <g transform="translate(0, 104)">
+        <rect width="244" height="42" rx="8" fill="#0B132B" stroke="#1E293B"/>
+        <circle cx="18" cy="21" r="5" fill="#3B82F6"/>
+        <text x="32" y="25" class="font-sans" font-size="13" font-weight="600" fill="#E2E8F0">Diner QR Mobile Portal</text>
+      </g>
+
+      <!-- Item 4 -->
+      <g transform="translate(0, 156)">
+        <rect width="244" height="42" rx="8" fill="#0B132B" stroke="#1E293B"/>
+        <circle cx="18" cy="21" r="5" fill="#3B82F6"/>
+        <text x="32" y="25" class="font-sans" font-size="13" font-weight="600" fill="#E2E8F0">Secondary Customer Screen</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- CONNECTOR 1 -->
+  <g stroke="#E11D48" stroke-width="2" stroke-opacity="0.6" stroke-dasharray="4 4">
+    <line x1="320" y1="180" x2="410" y2="180"/>
+    <line x1="320" y1="280" x2="410" y2="280"/>
+  </g>
+  <polygon points="410,180 402,176 402,184" fill="#E11D48"/>
+  <polygon points="410,280 402,276 402,284" fill="#E11D48"/>
+
+  <!-- COLUMN 2: LOCAL LAN SERVER (CORE) -->
+  <g transform="translate(410, 85)">
+    <rect width="320" height="295" rx="14" fill="url(#coreGrad)" stroke="#E11D48" stroke-width="1.5" filter="url(#boxShadow)"/>
+    <rect width="320" height="38" rx="14" fill="#881337" fill-opacity="0.3"/>
+    <rect y="24" width="320" height="14" fill="#881337" fill-opacity="0.3"/>
+    <circle cx="20" cy="19" r="5" fill="#FF3366"/>
+    <text x="32" y="24" class="font-sans" font-size="13" font-weight="700" fill="#FDA4AF">LOCAL RESTAURANT SERVER</text>
+
+    <!-- Core components -->
+    <g transform="translate(18, 54)">
+      <!-- NestJS -->
+      <rect width="284" height="46" rx="8" fill="#1E1E2E" stroke="#334155"/>
+      <text x="16" y="22" class="font-sans" font-size="13" font-weight="700" fill="#FFFFFF">NestJS 11 REST &amp; Event Core</text>
+      <text x="16" y="38" class="font-mono" font-size="11" font-weight="500" fill="#94A3B8">Port 4000 · 20 Domain Modules</text>
+
+      <!-- Socket.IO -->
+      <g transform="translate(0, 56)">
+        <rect width="284" height="46" rx="8" fill="#1E1E2E" stroke="#334155"/>
+        <text x="16" y="22" class="font-sans" font-size="13" font-weight="700" fill="#FFFFFF">Socket.IO Realtime Gateway</text>
+        <text x="16" y="38" class="font-mono" font-size="11" font-weight="500" fill="#94A3B8">Scoped Rooms: branch &amp; user</text>
+      </g>
+
+      <!-- Postgres -->
+      <g transform="translate(0, 112)">
+        <rect width="284" height="46" rx="8" fill="#1E1E2E" stroke="#334155"/>
+        <text x="16" y="22" class="font-sans" font-size="13" font-weight="700" fill="#FFFFFF">PostgreSQL 16 &amp; Prisma ORM</text>
+        <text x="16" y="38" class="font-mono" font-size="11" font-weight="500" fill="#94A3B8">78 Relational Models · Snapshots</text>
+      </g>
+
+      <!-- MCP -->
+      <g transform="translate(0, 168)">
+        <rect width="284" height="44" rx="8" fill="#1E1E2E" stroke="#E11D48" stroke-opacity="0.4"/>
+        <text x="16" y="20" class="font-sans" font-size="13" font-weight="700" fill="#FB7185">Stateless MCP Server (/v1/mcp)</text>
+        <text x="16" y="35" class="font-mono" font-size="11" font-weight="500" fill="#CBD5E1">40 AI Tools · RBAC Protected</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- CONNECTOR 2 -->
+  <g stroke="#10B981" stroke-width="2" stroke-opacity="0.6" stroke-dasharray="4 4">
+    <line x1="730" y1="180" x2="800" y2="180"/>
+    <line x1="730" y1="280" x2="800" y2="280"/>
+  </g>
+  <polygon points="800,180 792,176 792,184" fill="#10B981"/>
+  <polygon points="800,280 792,276 792,284" fill="#10B981"/>
+
+  <!-- COLUMN 3: BACK-OF-HOUSE & PERIPHERALS -->
+  <g transform="translate(800, 85)">
+    <rect width="260" height="295" rx="14" fill="url(#coreGrad)" stroke="#334155" filter="url(#boxShadow)"/>
+    <rect width="260" height="38" rx="14" fill="#1E293B" fill-opacity="0.7"/>
+    <rect y="24" width="260" height="14" fill="#1E293B" fill-opacity="0.7"/>
+    <text x="20" y="24" class="font-sans" font-size="13" font-weight="700" fill="#34D399">KITCHEN &amp; PERIPHERALS</text>
+
+    <!-- Items -->
+    <g transform="translate(18, 54)">
+      <!-- Item 1 -->
+      <rect width="224" height="42" rx="8" fill="#0B132B" stroke="#1E293B"/>
+      <circle cx="18" cy="21" r="5" fill="#10B981"/>
+      <text x="32" y="25" class="font-sans" font-size="13" font-weight="600" fill="#E2E8F0">Kitchen Display (KDS)</text>
+
+      <!-- Item 2 -->
+      <g transform="translate(0, 52)">
+        <rect width="224" height="42" rx="8" fill="#0B132B" stroke="#1E293B"/>
+        <circle cx="18" cy="21" r="5" fill="#10B981"/>
+        <text x="32" y="25" class="font-sans" font-size="13" font-weight="600" fill="#E2E8F0">USB ESC/POS Thermal</text>
+      </g>
+
+      <!-- Item 3 -->
+      <g transform="translate(0, 104)">
+        <rect width="224" height="42" rx="8" fill="#0B132B" stroke="#1E293B"/>
+        <circle cx="18" cy="21" r="5" fill="#10B981"/>
+        <text x="32" y="25" class="font-sans" font-size="13" font-weight="600" fill="#E2E8F0">LAN Network Printers</text>
+      </g>
+
+      <!-- Item 4 -->
+      <g transform="translate(0, 156)">
+        <rect width="224" height="42" rx="8" fill="#0B132B" stroke="#1E293B"/>
+        <circle cx="18" cy="21" r="5" fill="#10B981"/>
+        <text x="32" y="25" class="font-sans" font-size="13" font-weight="600" fill="#E2E8F0">Automated Cash Drawers</text>
+      </g>
+    </g>
+  </g>
+</svg>

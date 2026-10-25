@@ -1,11 +1,11 @@
 <div align="center">
 
-<img src="docs/assets/brandforge-lockup.svg" alt="BrandForge POS Logo" width="460">
+<img src="docs/assets/brandforge-header.svg" alt="BrandForge POS Logo" width="460">
 
 <br/><br/>
 
 <p align="center">
-  <img src="docs/assets/hero-animated.svg" alt="BrandForge POS: Interactive Terminal Overview" width="100%">
+  <img src="docs/assets/brandforge-hero.svg" alt="BrandForge POS: Interactive Terminal Overview" width="100%">
 </p>
 
 **Open-source, offline-first Restaurant POS & Operations Suite**  
@@ -51,7 +51,7 @@ The entire stack — PostgreSQL 16, NestJS API, and Next.js frontend — runs on
 ## 🍱 Core Capabilities
 
 <p align="center">
-  <img src="docs/assets/feature-bento.svg" alt="BrandForge POS Feature Bento Grid" width="100%">
+  <img src="docs/assets/brandforge-capabilities.svg" alt="BrandForge POS Feature Bento Grid" width="100%">
 </p>
 
 ---
@@ -61,7 +61,7 @@ The entire stack — PostgreSQL 16, NestJS API, and Next.js frontend — runs on
 BrandForge POS operates as a self-contained local appliance. A single machine on the restaurant's LAN runs the backend, database, and web server. All counter tills, waiter tablets, kitchen bump bars, and diner phones communicate over high-speed local Wi-Fi / Ethernet without pinging the cloud.
 
 <p align="center">
-  <img src="docs/assets/architecture-diagram.svg" alt="BrandForge POS Network & System Architecture" width="100%">
+  <img src="docs/assets/brandforge-architecture.svg" alt="BrandForge POS Network & System Architecture" width="100%">
 </p>
 
 ---
@@ -111,7 +111,7 @@ BrandForge POS operates as a self-contained local appliance. A single machine on
 ## 🚀 Quick Start
 
 <p align="center">
-  <img src="docs/assets/install-animated.svg" alt="BrandForge POS Installation Walkthrough" width="100%">
+  <img src="docs/assets/brandforge-install.svg" alt="BrandForge POS Installation Walkthrough" width="100%">
 </p>
 
 ### 1. Docker Compose (Recommended)
